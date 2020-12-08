@@ -1,0 +1,17 @@
+<button class="btn-success" type="button" (click)="getUsers()">
+  Get Course
+</button>
+
+<br><br><br>
+<div *ngFor="let user of userList" class="list">
+  <ul>
+    <li class="li">
+      <em style="color: red;">course:</em> {{user.course}},<br>
+      <em style="color: red;">level:</em> {{user.level}},<br>
+        <em style="color: red;">Author:</em> {{ user.author}},<br>
+          <em style="color: red;">Training: </em>{{ user.training}},<br>
+            <em style="color: red;">Price:</em> {{ user.price}},<br>
+      <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+    </li>
+  </ul>
+</div>
